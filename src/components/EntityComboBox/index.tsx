@@ -8,14 +8,26 @@ import FormControl from "@mui/material/FormControl";
 import data from "../../data/data.json";
 import Autocomplete from "@mui/material/Autocomplete";
 
-export const EntityComboBox: React.FC = () => {
-  const [value, setValue] = useState("");
+interface IProps {
+  onChange: (value: string) => void;
+  value: string;
+}
 
+export const EntityComboBox: React.FC<IProps> = ({ onChange, value }) => {
   return (
-    <Autocomplete
-      options={data.map(({ id, label }) => label)}
-      renderInput={(params) => <TextField {...params} label="Entity" />}
-      //   PopperComponent={<Button variant="text">add new position</Button>}
-    />
+    <>
+      <InputLabel id="select-label">Entity</InputLabel>
+      <Select
+        sx={{ marginBottom: "20px" }}
+        labelId="select-label"
+        id="demo-simple-select"
+        value={value}
+        label="Entity"
+        onChange={(e) => onChange(e.target.value)}
+      >
+        <MenuItem value={"Individual"}>Individual</MenuItem>
+        <MenuItem value={"Company"}>Company</MenuItem>
+      </Select>
+    </>
   );
 };

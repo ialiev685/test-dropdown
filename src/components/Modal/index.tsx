@@ -1,11 +1,14 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { EntityComboBox } from "../EntityComboBox";
+import Typography from "@mui/material/Typography";
 
-export const Modal: React.FC = () => {
+export const Modal: React.FC = ({ children }) => {
   return (
     <Box width="30%" height="80vh">
-      <EntityComboBox />
+      <Typography variant="h3" component="h3">
+        Add
+      </Typography>
+      {children}
     </Box>
   );
 };
