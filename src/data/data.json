@@ -1,0 +1,13 @@
+[
+  { "id": 1, "label": "Chief" },
+  { "id": 2, "label": "Operating Officer" },
+  { "id": 3, "label": "Chief Executive Officer" },
+  { "id": 4, "label": "Treasurer" },
+  { "id": 5, "label": "Accountant" },
+  { "id": 6, "label": "Bookkeeper" },
+  { "id": 7, "label": "Ubio" },
+  { "id": 8, "label": "shareholder" },
+  { "id": 9, "label": "Director" },
+  { "id": 10, "label": "Secretary" },
+  { "id": 11, "label": "Managing director" }
+]
